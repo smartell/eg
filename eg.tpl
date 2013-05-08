@@ -43,6 +43,13 @@ FUNCTION growth
 	pre_len = cGrowthModel.calcLength(age);
 	epsilon = cGrowthModel.calcResiduals(age,len);
 	
+	// An array of class objects
+	vonbert test[3];  // index from 0-2
+	COUT(test[0].getLinf());
+	test[2].setLinf(33);
+	COUT(test[2].getLinf());
+	COUT(test[2].calcLength(age));
+
 FUNCTION calcObjFun
 	objfun = dnorm(epsilon,sig);
 
